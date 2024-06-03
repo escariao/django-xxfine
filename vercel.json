@@ -4,5 +4,8 @@
   ],
   "routes": [
     { "src": "/(.*)", "dest": "myproject/wsgi.py" }
-  ]
+  ],
+  "hooks": {
+    "build": "python manage.py migrate && python create_superuser.py"
+  }
 }
